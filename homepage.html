@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Killarney.ai — Ireland's Wild Heart</title>
+<meta name="description" content="Killarney.ai — the definitive local guide to Killarney, Kerry. Hiking, history, music, nature and the insider knowledge that only comes from living here.">
+<meta property="og:title" content="Killarney.ai — Ireland's Wild Heart">
+<meta property="og:description" content="The definitive local guide to Killarney, Kerry. Hiking, history, music, nature and the insider knowledge that only comes from living here.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.killarney.ai">
+<link rel="canonical" href="https://www.killarney.ai">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ink:      #18120a;
+  --ink2:     #3d2f1f;
+  --ink3:     #7a6248;
+  --amber:    #c4862a;
+  --amber-lt: #e0a84a;
+  --terra:    #b85030;
+  --forest:   #2d5a27;
+  --forest2:  #3d7a35;
+  --cream:    #faf7f2;
+  --cream2:   #f2ece0;
+  --border:   rgba(24,18,10,0.1);
+  --nav-h:    68px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; width: 100%; object-fit: cover; }
+
+/* ── NAV ── */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  height: var(--nav-h);
+  background: var(--ink);
+  display: flex;
+  align-items: center;
+}
+
+.nav-inner {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  font-weight: 400;
+  color: var(--cream);
+  letter-spacing: 0.01em;
+  flex-shrink: 0;
+}
+.nav-logo span { color: var(--amber); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(250,247,242,0.55);
+  padding: 0.5em 1em;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--cream); }
+
+.nav-right { display: flex; align-items: center; gap: 1rem; }
+
+.nav-advertise {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--amber);
+  padding: 0.5em 1.2em;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+.nav-advertise:hover { background: var(--amber-lt); }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--cream); border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: var(--nav-h); left: 0; right: 0;
+  background: var(--ink);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 1.5rem 2.5rem;
+  z-index: 99;
+  flex-direction: column;
+  gap: 0;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(250,247,242,0.65);
+  padding: 0.9em 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: color 0.2s;
+}
+.mobile-menu a:hover { color: var(--cream); }
+
+/* ── HERO ── */
+.hero {
+  margin-top: var(--nav-h);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: calc(100vh - var(--nav-h));
+}
+
+.hero-left {
+  background: var(--ink);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 4rem 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-left::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--amber), var(--terra));
+}
+
+.hero-kicker {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 5.5vw, 5.5rem);
+  font-weight: 300;
+  line-height: 0.98;
+  color: var(--cream);
+  margin-bottom: 2rem;
+  letter-spacing: -0.01em;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--amber);
+  display: block;
+}
+
+.hero-body {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(250,247,242,0.6);
+  line-height: 1.7;
+  max-width: 420px;
+  margin-bottom: 2.5rem;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.hero-tag {
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid rgba(250,247,242,0.15);
+  color: rgba(250,247,242,0.45);
+  padding: 0.35em 0.85em;
+  border-radius: 2px;
+}
+
+.hero-right {
+  position: relative;
+  overflow: hidden;
+}
+.hero-right img {
+  height: 100%;
+  object-position: center 30%;
+  transition: transform 8s ease;
+}
+.hero-right:hover img { transform: scale(1.03); }
+
+.hero-weather {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: rgba(24,18,10,0.72);
+  backdrop-filter: blur(10px);
+  padding: 0.8rem 1.1rem;
+  border-left: 2px solid var(--amber);
+  text-align: right;
+}
+.hero-weather-temp {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1;
+}
+.hero-weather-desc {
+  font-size: 0.7rem;
+  color: rgba(250,247,242,0.55);
+  margin-top: 0.2rem;
+  letter-spacing: 0.05em;
+}
+.hero-weather-loc {
+  font-size: 0.62rem;
+  color: var(--amber);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 0.15rem;
+}
+
+/* ── RULE ── */
+.rule {
+  height: 4px;
+  background: linear-gradient(90deg, var(--forest) 0%, var(--amber) 50%, var(--terra) 100%);
+}
+
+/* ── INTRO ── */
+.intro {
+  background: var(--cream2);
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.intro-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 5rem;
+  align-items: start;
+}
+.intro-label {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 1rem;
+}
+.intro-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--ink);
+}
+.intro-heading em { font-style: italic; color: var(--forest); }
+
+.intro-body { padding-top: 0.5rem; }
+.intro-body p {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--ink2);
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+  max-width: 640px;
+}
+.intro-body p:last-child { margin-bottom: 0; }
+
+.intro-stats {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border);
+}
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: var(--forest);
+  line-height: 1;
+  margin-bottom: 0.2rem;
+}
+.stat-label {
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink3);
+}
+
+/* ── PHOTOS ── */
+.photos { padding: 5rem 0; background: var(--cream); }
+.photos-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+.photos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+}
+.section-label {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 0.6rem;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1.15;
+}
+.section-title em { font-style: italic; color: var(--forest); }
+
+/* Asymmetric photo grid */
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+}
+
+.photo-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.photo-item img {
+  transition: transform 0.6s ease;
+}
+.photo-item:hover img { transform: scale(1.04); }
+
+.photo-item:nth-child(1) { grid-row: span 2; }
+
+.photo-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 1.5rem 1.5rem 1.2rem;
+  background: linear-gradient(to top, rgba(24,18,10,0.88) 0%, transparent 100%);
+  transform: translateY(6px);
+  transition: transform 0.3s;
+}
+.photo-item:hover .photo-caption { transform: translateY(0); }
+
+.photo-cap-label {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 0.3rem;
+}
+.photo-cap-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 0.3rem;
+}
+.photo-cap-desc {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.5;
+}
+
+/* Second row: two equal photos */
+.photo-row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* ── EXPLORE STRIP ── */
+.explore-strip {
+  background: var(--ink);
+  padding: 3.5rem 0;
+}
+.explore-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+.explore-label {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 1.5rem;
+}
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.explore-item {
+  padding: 1.6rem 1.2rem;
+  background: var(--ink);
+  text-align: center;
+  transition: background 0.2s;
+  display: block;
+}
+.explore-item:hover { background: rgba(255,255,255,0.04); }
+.explore-icon { font-size: 1.4rem; margin-bottom: 0.6rem; display: block; }
+.explore-name {
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(250,247,242,0.45);
+  transition: color 0.2s;
+}
+.explore-item:hover .explore-name { color: var(--amber); }
+
+/* ── NEWSLETTER ── */
+.newsletter {
+  position: relative;
+  overflow: hidden;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+.nl-bg { position: absolute; inset: 0; z-index: 0; }
+.nl-bg img { height: 100%; }
+.nl-overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(105deg,
+    rgba(24,18,10,0.96) 0%,
+    rgba(24,18,10,0.92) 40%,
+    rgba(24,18,10,0.5) 100%
+  );
+}
+.nl-content {
+  position: relative; z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 5rem 2.5rem;
+  max-width: 600px;
+  margin-left: 2.5rem;
+}
+@media (min-width: 900px) {
+  .nl-content { margin-left: calc((100vw - 1400px) / 2 + 2.5rem); }
+}
+.nl-label {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 1rem;
+}
+.nl-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+.nl-title em { font-style: italic; color: var(--amber); }
+.nl-body {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: rgba(250,247,242,0.6);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 440px;
+}
+.nl-form {
+  display: flex;
+  border: 1px solid rgba(196,134,42,0.5);
+  border-radius: 2px;
+  overflow: hidden;
+  max-width: 440px;
+  background: rgba(24,18,10,0.4);
+  backdrop-filter: blur(8px);
+}
+.nl-form:focus-within { border-color: var(--amber); }
+.nl-form input[type="email"] {
+  flex: 1;
+  background: transparent;
+  border: none; outline: none;
+  padding: 0.9rem 1.1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--cream);
+}
+.nl-form input::placeholder { color: rgba(250,247,242,0.3); }
+.nl-form button {
+  background: var(--amber);
+  border: none;
+  padding: 0.9rem 1.4rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.nl-form button:hover { background: var(--amber-lt); }
+.nl-note {
+  font-size: 0.7rem;
+  color: rgba(250,247,242,0.3);
+  margin-top: 0.8rem;
+}
+.nl-msg {
+  font-size: 0.82rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 2px;
+  margin-top: 0.6rem;
+  display: none;
+  max-width: 440px;
+}
+.nl-msg.success { display:block; background:rgba(45,90,39,0.35); color:#8ecf84; border:1px solid rgba(45,90,39,0.4); }
+.nl-msg.error   { display:block; background:rgba(140,30,30,0.3);  color:#e08080; border:1px solid rgba(140,30,30,0.4); }
+
+/* ── FOOTER ── */
+footer {
+  background: #100d07;
+  padding: 3rem 0 2rem;
+  border-top: 3px solid var(--forest);
+}
+.footer-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  margin-bottom: 1.5rem;
+}
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--cream);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+.footer-logo span { color: var(--amber); }
+.footer-tagline {
+  font-size: 0.82rem;
+  color: rgba(250,247,242,0.4);
+  line-height: 1.6;
+  max-width: 240px;
+}
+.footer-col h4 {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 1rem;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+.footer-col a {
+  font-size: 0.8rem;
+  color: rgba(250,247,242,0.4);
+  transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--cream); }
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.footer-copy, .footer-built {
+  font-size: 0.72rem;
+  color: rgba(250,247,242,0.2);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .explore-grid { grid-template-columns: repeat(4, 1fr); }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .intro-inner { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+@media (max-width: 768px) {
+  .nav-links, .nav-advertise { display: none; }
+  .hamburger { display: flex; }
+
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-left { padding: 3rem 1.5rem; min-height: 70vw; }
+  .hero-right { height: 55vw; }
+
+  .photo-grid { grid-template-columns: 1fr; }
+  .photo-item:nth-child(1) { grid-row: span 1; }
+  .photo-row2 { grid-template-columns: 1fr; }
+
+  .explore-grid { grid-template-columns: repeat(4, 1fr); }
+
+  .nl-content { padding: 3.5rem 1.5rem; }
+
+  .footer-top { grid-template-columns: 1fr; gap: 1.5rem; }
+  .photos-inner, .explore-inner, .intro-inner { padding: 0 1.5rem; }
+  .intro { padding: 3.5rem 0; }
+  .photos { padding: 3.5rem 0; }
+
+  .intro-stats { gap: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .explore-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-title { font-size: 2.6rem; }
+}
+
+/* ── REVEAL ── */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/">Killarney<span>.ai</span></a>
+    <ul class="nav-links">
+      <li><a href="/nature.html">Nature</a></li>
+      <li><a href="/hiking.html">Hiking</a></li>
+      <li><a href="/history.html">History</a></li>
+      <li><a href="/music.html">Music</a></li>
+      <li><a href="/golf.html">Golf</a></li>
+      <li><a href="/fishing.html">Fishing</a></li>
+      <li><a href="/wellness.html">Wellness</a></li>
+      <li><a href="/about.html">About</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="/advertise.html" class="nav-advertise">Advertise</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/nature.html">Nature</a>
+  <a href="/hiking.html">Hiking</a>
+  <a href="/history.html">History</a>
+  <a href="/music.html">Music</a>
+  <a href="/golf.html">Golf</a>
+  <a href="/fishing.html">Fishing</a>
+  <a href="/wellness.html">Wellness</a>
+  <a href="/about.html">About</a>
+  <a href="/advertise.html">Advertise</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-kicker">Kerry · Ireland · 52°N</div>
+    <h1 class="hero-title">
+      Ireland's
+      <em>Wild Heart</em>
+    </h1>
+    <p class="hero-body">
+      Killarney is one of Ireland's most extraordinary places — ancient national park, mountain passes, three shimmering lakes, and a town that knows how to live well. This is your guide to all of it.
+    </p>
+    <div class="hero-tags">
+      <span class="hero-tag">National Park</span>
+      <span class="hero-tag">Ring of Kerry</span>
+      <span class="hero-tag">MacGillycuddy's Reeks</span>
+      <span class="hero-tag">Lakes of Killarney</span>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="img-park.jpg" alt="Killarney National Park — MacGillycuddy's Reeks in the background" loading="eager">
+    <div class="hero-weather">
+      <div class="hero-weather-temp" id="wTemp">—°C</div>
+      <div class="hero-weather-desc" id="wDesc">Loading…</div>
+      <div class="hero-weather-loc">Killarney, Kerry</div>
+    </div>
+  </div>
+</div>
+
+<div class="rule"></div>
+
+<!-- INTRO -->
+<section class="intro reveal">
+  <div class="intro-inner">
+    <div>
+      <div class="intro-label">About Killarney</div>
+      <h2 class="intro-heading">A town built around <em>natural wonder</em></h2>
+    </div>
+    <div class="intro-body">
+      <p>Killarney sits at the edge of Ireland's oldest and largest national park — 26,000 acres of ancient oak woodland, blanket bog, mountain peaks and the famous Lakes of Killarney. It's been drawing visitors for over two centuries, and the reasons haven't changed.</p>
+      <p>MacGillycuddy's Reeks, Ireland's highest mountain range, rises to the south-west. The Gap of Dunloe cuts through them like a wound in the earth. Muckross House sits quietly on the lakeshore, unchanged since Victorian times. The pubs fill with traditional music every night of the week.</p>
+      <p>Killarney.ai is a guide built by someone who lives here — the trails worth walking, the sessions worth sitting through, the history worth knowing and the spots that don't make it into brochures.</p>
+      <div class="intro-stats">
+        <div>
+          <div class="stat-num">26k</div>
+          <div class="stat-label">Acres of National Park</div>
+        </div>
+        <div>
+          <div class="stat-num">3</div>
+          <div class="stat-label">Lakes</div>
+        </div>
+        <div>
+          <div class="stat-num">1,038m</div>
+          <div class="stat-label">Carrauntoohil — Ireland's highest peak</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTOS -->
+<section class="photos reveal">
+  <div class="photos-inner">
+    <div class="photos-header">
+      <div>
+        <div class="section-label">Killarney Through the Lens</div>
+        <h2 class="section-title">Four sides of <em>Kerry</em></h2>
+      </div>
+    </div>
+
+    <!-- Large + small layout -->
+    <div class="photo-grid">
+      <!-- Large left -->
+      <div class="photo-item" style="height: 580px;">
+        <img src="img-sunset.jpg" alt="Sunset over the Lakes of Killarney" style="height:100%;">
+        <div class="photo-caption">
+          <div class="photo-cap-label">Golden Hour</div>
+          <div class="photo-cap-title">Sunset over the Lakes of Killarney</div>
+          <div class="photo-cap-desc">Lough Leane at dusk — MacGillycuddy's Reeks silhouetted against the sky.</div>
+        </div>
+      </div>
+      <!-- Top right -->
+      <div class="photo-item" style="height: 280px;">
+        <img src="img-park.jpg" alt="Killarney National Park" style="height:100%;">
+        <div class="photo-caption">
+          <div class="photo-cap-label">The National Park</div>
+          <div class="photo-cap-title">26,000 Acres of Ancient Wilderness</div>
+          <div class="photo-cap-desc">Ireland's oldest national park, established in 1932.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom row -->
+    <div class="photo-row2">
+      <div class="photo-item" style="height: 280px;">
+        <img src="img-forest.jpg" alt="Ancient woodland in Killarney National Park" style="height:100%;">
+        <div class="photo-caption">
+          <div class="photo-cap-label">Ancient Woodland</div>
+          <div class="photo-cap-title">The Old Oak Woods</div>
+          <div class="photo-cap-desc">Some of Ireland's last remaining native oak forest, alive with light in autumn.</div>
+        </div>
+      </div>
+      <div class="photo-item" style="height: 280px;">
+        <img src="img-town.jpg" alt="Killarney town centre" style="height:100%;">
+        <div class="photo-caption">
+          <div class="photo-cap-label">The Town</div>
+          <div class="photo-cap-title">Killarney Town Centre</div>
+          <div class="photo-cap-desc">A town built around tourism but still very much its own place — busy, warm and full of life.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORE STRIP -->
+<div class="explore-strip reveal">
+  <div class="explore-inner">
+    <div class="explore-label">Explore the Guides</div>
+    <div class="explore-grid">
+      <a class="explore-item" href="/nature.html">
+        <span class="explore-icon">🌿</span>
+        <div class="explore-name">Nature</div>
+      </a>
+      <a class="explore-item" href="/hiking.html">
+        <span class="explore-icon">🏔️</span>
+        <div class="explore-name">Hiking</div>
+      </a>
+      <a class="explore-item" href="/golf.html">
+        <span class="explore-icon">⛳</span>
+        <div class="explore-name">Golf</div>
+      </a>
+      <a class="explore-item" href="/fishing.html">
+        <span class="explore-icon">🎣</span>
+        <div class="explore-name">Fishing</div>
+      </a>
+      <a class="explore-item" href="/history.html">
+        <span class="explore-icon">🏰</span>
+        <div class="explore-name">History</div>
+      </a>
+      <a class="explore-item" href="/events.html">
+        <span class="explore-icon">🎪</span>
+        <div class="explore-name">Events</div>
+      </a>
+      <a class="explore-item" href="/music.html">
+        <span class="explore-icon">🎵</span>
+        <div class="explore-name">Music</div>
+      </a>
+      <a class="explore-item" href="/wellness.html">
+        <span class="explore-icon">🧘</span>
+        <div class="explore-name">Wellness</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- NEWSLETTER -->
+<section class="newsletter reveal">
+  <div class="nl-bg">
+    <img src="img-sunset.jpg" alt="Sunset over Killarney" loading="lazy">
+  </div>
+  <div class="nl-overlay"></div>
+  <div class="nl-content">
+    <div class="nl-label">Stay in the Loop</div>
+    <h2 class="nl-title">Killarney in <em>your inbox</em></h2>
+    <p class="nl-body">Events, trail conditions, local news and the hidden gems only locals know about. Sent when there's something worth saying.</p>
+    <form class="nl-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="736d3cef-b983-41e2-9871-3992c524dec8">
+      <input type="hidden" name="subject" value="New newsletter signup — killarney.ai">
+      <input type="hidden" name="from_name" value="Killarney.ai">
+      <input type="hidden" name="redirect" value="https://www.killarney.ai/?subscribed=1">
+      <input type="checkbox" name="botcheck" style="display:none">
+      <input type="email" name="email" placeholder="your@email.com" required autocomplete="email">
+      <button type="submit">Subscribe</button>
+    </form>
+    <p class="nl-note">Free. No spam. Unsubscribe any time.</p>
+    <div class="nl-msg" id="nlMsg" role="alert" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <span class="footer-logo">Killarney<span>.ai</span></span>
+        <p class="footer-tagline">The living guide to Killarney, Kerry — built by a local, for anyone who wants to know this place properly.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/nature.html">Nature & Wildlife</a></li>
+          <li><a href="/hiking.html">Hiking & Trails</a></li>
+          <li><a href="/golf.html">Golf</a></li>
+          <li><a href="/fishing.html">Fishing</a></li>
+          <li><a href="/history.html">History</a></li>
+          <li><a href="/music.html">Music & Pubs</a></li>
+          <li><a href="/wellness.html">Wellness</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="/events.html">Events Calendar</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/advertise.html">Advertise</a></li>
+          <li><a href="/ai-services.html">AI Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:killarneyai@gmail.com">killarneyai@gmail.com</a></li>
+          <li><a href="/advertise.html">List your business</a></li>
+          <li><a href="/events.html">Submit an event</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Killarney.ai · Kerry, Ireland</div>
+      <div class="footer-built">Built with local knowledge 🌿</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* HAMBURGER */
+const burger = document.getElementById('hamburger');
+const menu   = document.getElementById('mobileMenu');
+burger.addEventListener('click', () => {
+  const open = menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open);
+});
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+
+/* WEATHER */
+(async () => {
+  const codes = {
+    0:'Clear sky',1:'Mainly clear',2:'Partly cloudy',3:'Overcast',
+    45:'Foggy',48:'Icy fog',51:'Light drizzle',53:'Drizzle',55:'Heavy drizzle',
+    61:'Light rain',63:'Rain',65:'Heavy rain',71:'Light snow',73:'Snow',75:'Heavy snow',
+    80:'Rain showers',81:'Showers',82:'Heavy showers',95:'Thunderstorm',
+  };
+  try {
+    const r = await fetch('https://api.open-meteo.com/v1/forecast?latitude=52.06&longitude=-9.50&current_weather=true');
+    const d = await r.json();
+    const w = d.current_weather;
+    document.getElementById('wTemp').textContent = Math.round(w.temperature) + '°C';
+    document.getElementById('wDesc').textContent = codes[w.weathercode] || 'Kerry skies';
+  } catch(e) {}
+})();
+
+/* NEWSLETTER SUCCESS */
+const params = new URLSearchParams(window.location.search);
+if (params.get('subscribed') === '1') {
+  const msg = document.getElementById('nlMsg');
+  msg.textContent = "You're on the list — welcome to the Killarney community!";
+  msg.className = 'nl-msg success';
+  history.replaceState(null, '', '/');
+}
+
+/* SCROLL REVEAL */
+const observer = new IntersectionObserver(
+  entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),
+  { threshold: 0.08 }
+);
+document.querySelectorAll('.reveal').forEach(r => observer.observe(r));
+</script>
+</body>
+</html>
