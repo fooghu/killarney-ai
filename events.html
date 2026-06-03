@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annual Events in Killarney — Festivals &amp; Celebrations</title>
+  <meta name="description" content="Killarney's annual events — the Races, Puck Fair, Wander Wild Festival, Pan Celtic, Christmas in Killarney and more. Plan your visit around them.">
+  <link rel="canonical" href="https://www.killarney.ai/events.html">
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    .hero { background: linear-gradient(160deg, #1a0a2a 0%, #3a1a5a 50%, #5a2a7a 100%); }
+    .cat-label { font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--rule); }
+    .intro-block { max-width:720px;margin:0 auto;text-align:center;padding:64px 24px 48px; }
+    .intro-block h2 { font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,36px);font-weight:700;color:var(--ink);margin-bottom:14px; }
+    .intro-block p { font-size:16px;color:var(--ink-muted);line-height:1.7; }
+
+    /* Timeline-style event card */
+    .event-card {
+      background: var(--card-bg);
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      overflow: hidden;
+      text-decoration: none;
+      color: var(--ink);
+      display: flex;
+      gap: 0;
+      transition: transform .2s, box-shadow .2s;
+      box-shadow: var(--card-shadow);
+    }
+    .event-card:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(30,42,31,0.12); text-decoration: none; }
+
+    .event-card-month {
+      width: 80px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 10px;
+      background: var(--accent);
+      color: white;
+    }
+    .event-card-month .mon {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+    .event-card-month .day {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .event-card-body {
+      padding: 20px 24px;
+      flex: 1;
+    }
+    .event-card-body .tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .event-card-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--ink);
+    }
+    .event-card-body p {
+      font-size: 14px;
+      color: var(--ink-muted);
+      line-height: 1.55;
+    }
+    .event-card-body .arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .event-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    @media (max-width: 480px) {
+      .event-card-month { width: 64px; }
+      .event-card-month .day { font-size: 26px; }
+      .event-card-body { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        
+        <span class="nav-logo-text">killarney<span>.ai</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="heritage.html">Heritage</a></li>
+        <li><a href="eat-drink.html">Eat &amp; Drink</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="events.html" class="active">Events</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle"><span id="themeIcon">🌙</span></button>
+        <button class="hamburger" id="hamburger" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="discover.html">Discover</a>
+    <a href="heritage.html">Heritage</a>
+    <a href="eat-drink.html">Eat &amp; Drink</a>
+    <a href="activities.html">Activities</a>
+    <a href="events.html" class="active">Events</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About</a>
+    <a href="advertise.html">Advertise</a>
+  </div>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Annual Festivals &amp; Events</p>
+      <h1>Events</h1>
+      <p class="hero-sub">Killarney's calendar of annual events — from ancient fairs to race meetings, outdoor festivals to Christmas celebrations.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>Events</span>
+    </div>
+  </div>
+
+  <div class="intro-block">
+    <h2>Plan your visit around an event</h2>
+    <p>These are events that happen every year without fail — some for centuries, some more recent but already embedded in the calendar. All of them are reasons to visit Killarney at a particular time of year.</p>
+  </div>
+
+  <!-- SPRING -->
+  <section class="section section-alt">
+    <div class="container">
+      <p class="cat-label">Spring</p>
+      <div class="event-stack">
+        <a href="events/st-patricks-day.html" class="event-card">
+          <div class="event-card-month" style="background:#2d7a38;"><div class="mon">Mar</div><div class="day">17</div></div>
+          <div class="event-card-body">
+            <p class="tag">National Holiday</p>
+            <h3>St. Patrick's Day</h3>
+            <p>Killarney's St. Patrick's Day parade draws big crowds to the town centre — a family day with floats, marching bands and a festive atmosphere throughout the pubs.</p>
+            <span class="arrow">Read more →</span>
+          </div>
+        </a>
+        <a href="events/pan-celtic.html" class="event-card">
+          <div class="event-card-month" style="background:#4a7a3a;"><div class="mon">Apr</div><div class="day">TBC</div></div>
+          <div class="event-card-body">
+            <p class="tag">Cultural Festival</p>
+            <h3>Pan Celtic Festival</h3>
+            <p>A celebration of the six Celtic nations — Ireland, Scotland, Wales, Brittany, Cornwall and Galicia — with music, dance, song and competitions held across Killarney venues.</p>
+            <span class="arrow">Read more →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUMMER -->
+  <section class="section">
+    <div class="container">
+      <p class="cat-label">Summer</p>
+      <div class="event-stack">
+        <a href="events/killarney-races.html" class="event-card">
+          <div class="event-card-month" style="background:#3a6a8a;"><div class="mon">Jul</div><div class="day">17</div></div>
+          <div class="event-card-body">
+            <p class="tag">Horse Racing · 3 Days</p>
+            <h3>Killarney Races — Summer Festival</h3>
+            <p>Three days of National Hunt and flat racing at Killarney Racecourse — one of Ireland's most scenic and atmospheric race meetings, as much about fashion and social occasion as the horses.</p>
+            <span class="arrow">Read more →</span>
+          </div>
+        </a>
+        <a href="events/killarney-races-august.html" class="event-card">
+          <div class="event-card-month" style="background:#3a6a8a;"><div class="mon">Aug</div><div class="day">TBC</div></div>
+          <div class="event-card-body">
+            <p class="tag">Horse Racing · 3 Days</p>
+            <h3>Killarney Races — August Festival</h3>
+            <p>The second of two annual Killarney race meetings — same atmosphere, same scenery, with the mountains reflected in the lakes as the backdrop.</p>
+            <span class="arrow">Read more →</span>
+          </div>
+        </a>
+        <a href="events/puck-fair.html" class="event-card">
+          <div class="event-card-month" style="background:#6a3a8a;"><div class="mon">Aug</div><div class="day">10</div></div>
+          <div class="event-card-body">
+            <p class="tag">Ancient Celtic Tradition · 3 Days</p>
+            <h3>Puck Fair, Killorglin</h3>
+            <p>One of Ireland's oldest and most unusual festivals — a wild goat is crowned King Puck for three days in Killorglin, 20 minutes from Killarney. Music, markets and ancient tradition since the 17th century.</p>
+            <span class="arrow">Read more →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTUMN -->
+  <section class="section section-alt">
+    <div class="container">
+      <p class="cat-label">Autumn</p>
+      <div class="event-stack">
+        <a href="events/wander-wild.html" class="event-card">
+          <div class="event-card-month" style="background:#5a7a3a;"><div class="mon">Sep</div><div class="day">TBC</div></div>
+          <div class="event-card-body">
+            <p class="tag">Outdoor Festival</p>
+            <h3>Wander Wild Festival</h3>
+            <p>Kerry's outdoor adventure and wellness festival — hiking, kayaking, yoga, wild swimming and talks set against the backdrop of the National Park. A relatively new event already firmly on the calendar.</p>
+            <span class="arrow">Read more →</span>
+          </div>
+        </a>
+        <a href="events/killarney-junction.html" class="event-card">
+          <div class="event-card-month" style="background:#7a5a2a;"><div class="mon">Oct</div><div class="day">TBC</div></div>
+          <div class="event-card-body">
+            <p class="tag">Music Festival</p>
+            <h3>Killarney Junction Festival</h3>
+            <p>An autumn music festival bringing national and international acts to Killarney venues — a growing fixture in the town's cultural calendar.</p>
+            <span class="arrow">Read more →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WINTER -->
+  <section class="section">
+    <div class="container">
+      <p class="cat-label">Winter</p>
+      <div class="event-stack">
+        <a href="events/christmas-killarney.html" class="event-card">
+          <div class="event-card-month" style="background:#2a4a6a;"><div class="mon">Dec</div><div class="day">TBC</div></div>
+          <div class="event-card-body">
+            <p class="tag">Seasonal</p>
+            <h3>Christmas in Killarney</h3>
+            <p>Killarney in December is genuinely magical — market stalls, festive lights along the main street, carol singers and the town at its most hospitable. A popular winter break destination.</p>
+            <span class="arrow">Read more →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:8px;">
+            
+            <span class="nav-logo-text">killarney<span>.ai</span></span>
+          </a>
+          <p>Your independent guide to Killarney, County Kerry.</p>
+        </div>
+        <div class="footer-col"><h4>Explore</h4><ul><li><a href="discover.html">Discover</a></li><li><a href="heritage.html">Heritage</a></li><li><a href="eat-drink.html">Eat &amp; Drink</a></li><li><a href="activities.html">Activities</a></li><li><a href="events.html">Events</a></li></ul></div>
+        <div class="footer-col"><h4>Site</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="about.html">About</a></li><li><a href="advertise.html">Advertise</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Events</h4><ul><li><a href="events/killarney-races.html">Killarney Races</a></li><li><a href="events/puck-fair.html">Puck Fair</a></li><li><a href="events/wander-wild.html">Wander Wild</a></li><li><a href="events/christmas-killarney.html">Christmas</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 killarney.ai — Killarney, County Kerry, Ireland</p>
+        <p><a href="mailto:killarneyai@gmail.com">killarneyai@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const html=document.documentElement,btn=document.getElementById('themeToggle'),icon=document.getElementById('themeIcon'),saved=localStorage.getItem('theme')||'light';
+    html.setAttribute('data-theme',saved);icon.textContent=saved==='dark'?'☀️':'🌙';
+    btn.addEventListener('click',()=>{const n=html.getAttribute('data-theme')==='dark'?'light':'dark';html.setAttribute('data-theme',n);localStorage.setItem('theme',n);icon.textContent=n==='dark'?'☀️':'🌙';});
+    const ham=document.getElementById('hamburger'),menu=document.getElementById('mobileMenu');
+    ham.addEventListener('click',()=>{const o=menu.classList.toggle('open');ham.classList.toggle('open',o);ham.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':'';});
+    menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');ham.classList.remove('open');ham.setAttribute('aria-expanded',false);document.body.style.overflow='';}));
+  </script>
+</body>
+</html>
