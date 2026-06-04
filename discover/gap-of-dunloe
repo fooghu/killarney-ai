@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gap of Dunloe — Killarney's Most Dramatic Glacial Valley</title>
+  <meta name="description" content="The Gap of Dunloe is a narrow glacial mountain pass cutting through the MacGillycuddy's Reeks west of Killarney. Walk, cycle or take a jaunting car through one of Ireland's most spectacular landscapes.">
+  <meta name="keywords" content="Gap of Dunloe, Killarney, things to do Killarney, Gap of Dunloe walk, Gap of Dunloe jaunting car, Kerry Ireland">
+  <meta property="og:title" content="Gap of Dunloe — killarney.ai">
+  <meta property="og:description" content="A narrow glacial pass through the MacGillycuddy's Reeks — one of the most dramatic landscapes in Ireland.">
+  <meta property="og:url" content="https://www.killarney.ai/discover/gap-of-dunloe.html">
+  <meta property="og:type" content="article">
+  <link rel="canonical" href="https://www.killarney.ai/discover/gap-of-dunloe.html">
+  <link rel="stylesheet" href="../shared.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristAttraction",
+    "name": "Gap of Dunloe",
+    "description": "A narrow glacial mountain pass cutting through the MacGillycuddy's Reeks, west of Killarney National Park.",
+    "url": "https://www.killarney.ai/discover/gap-of-dunloe.html",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Killarney",
+      "addressRegion": "County Kerry",
+      "addressCountry": "IE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 52.02,
+      "longitude": -9.65
+    }
+  }
+  </script>
+
+  <style>
+    .hero { background: linear-gradient(160deg, #0d1a0e 0%, #1e2a1f 50%, #2a3a2a 100%); }
+
+    .article-body {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+    .article-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(22px, 2.5vw, 30px);
+      font-weight: 700;
+      color: var(--ink);
+      margin: 48px 0 14px;
+      line-height: 1.25;
+    }
+    .article-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 32px 0 10px;
+    }
+    .article-body p {
+      font-size: 16px;
+      color: var(--ink-muted);
+      line-height: 1.8;
+      margin-bottom: 18px;
+    }
+    .article-body p:first-of-type {
+      font-size: 17px;
+      color: var(--ink);
+      line-height: 1.75;
+    }
+
+    .fact-box {
+      background: var(--accent-light);
+      border: 1px solid var(--rule);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      padding: 20px 24px;
+      margin: 32px 0;
+    }
+    .fact-box h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+    .fact-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .fact-box ul li { font-size: 14px; color: var(--ink-muted); display: flex; gap: 10px; }
+    .fact-box ul li strong { color: var(--ink); min-width: 120px; flex-shrink: 0; }
+
+    .pull-quote {
+      border-left: 3px solid var(--accent-gold);
+      padding: 4px 0 4px 24px;
+      margin: 36px 0;
+    }
+    .pull-quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-style: italic;
+      color: var(--ink);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .article-img {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 32px 0;
+      background: var(--bg-alt);
+      border: 1px solid var(--rule);
+    }
+    .article-img img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+    .article-img figcaption {
+      font-size: 13px;
+      color: var(--ink-muted);
+      padding: 10px 16px;
+      font-style: italic;
+    }
+
+    .section-rule { border: none; border-top: 1px solid var(--rule); margin: 48px 0; }
+
+    /* Ways to do the Gap */
+    .ways-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .way-card {
+      background: var(--card-bg);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+    .way-card .way-icon { font-size: 32px; margin-bottom: 10px; }
+    .way-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .way-card p { font-size: 13px; color: var(--ink-muted); line-height: 1.55; margin: 0; }
+
+    .practical-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .practical-item {
+      background: var(--card-bg);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      padding: 16px 20px;
+    }
+    .practical-item .label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .practical-item p { font-size: 14px; color: var(--ink); margin: 0; line-height: 1.5; }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 640px) {
+      .ways-grid { grid-template-columns: 1fr; }
+      .practical-grid { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .article-img img { height: 240px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <span class="nav-logo-text">killarney<span>.ai</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../discover.html" class="active">Discover</a></li>
+        <li><a href="../heritage.html">Heritage</a></li>
+        <li><a href="../eat-drink.html">Eat &amp; Drink</a></li>
+        <li><a href="../activities.html">Activities</a></li>
+        <li><a href="../events.html">Events</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle"><span id="themeIcon">🌙</span></button>
+        <button class="hamburger" id="hamburger" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../discover.html" class="active">Discover</a>
+    <a href="../heritage.html">Heritage</a>
+    <a href="../eat-drink.html">Eat &amp; Drink</a>
+    <a href="../activities.html">Activities</a>
+    <a href="../events.html">Events</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../about.html">About</a>
+    <a href="../advertise.html">Advertise</a>
+  </div>
+
+  <section class="hero">
+    <img class="hero-img" src="../img-forest.jpg" alt="Gap of Dunloe, Killarney" onerror="this.style.display='none'">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Discover · Nature &amp; Landscape</p>
+      <h1>Gap of Dunloe</h1>
+      <p class="hero-sub">A narrow glacial pass through the heart of the MacGillycuddy's Reeks — one of the most dramatic landscapes in Ireland.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="../discover.html">Discover</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Gap of Dunloe</span>
+    </div>
+  </div>
+
+  <div class="article-body">
+
+    <p>The Gap of Dunloe is one of those places that genuinely stops you. A narrow mountain pass carved by glacial action over thousands of years, it cuts through the MacGillycuddy's Reeks west of Killarney — hemmed in on both sides by steep rock faces, with a series of small lakes strung along the valley floor and the Black Valley opening out at the far end.</p>
+
+    <div class="fact-box">
+      <h4>Gap of Dunloe — at a glance</h4>
+      <ul>
+        <li><strong>Distance</strong> 11km from Kate Kearney's Cottage to Lord Brandon's Cottage</li>
+        <li><strong>Terrain</strong> Narrow mountain road, rough in places — no through traffic</li>
+        <li><strong>Best by</strong> Foot, bike or jaunting car</li>
+        <li><strong>Start point</strong> Kate Kearney's Cottage, 10km from Killarney town</li>
+        <li><strong>End point</strong> Lord Brandon's Cottage, Upper Lake</li>
+        <li><strong>Return</strong> Boat across the lakes back to Ross Castle</li>
+      </ul>
+    </div>
+
+    <h2>What makes it special</h2>
+    <p>The Gap is not a gentle stroll — it's a raw, exposed mountain valley with a scale that makes you feel small. Five small lakes — Coosaun, Black Lake, Auger Lake, Cushvalley Lake and Black Lough — are threaded along the valley floor, connected by a rushing stream. The road through is narrow and rough in places, closed to through traffic, which means it belongs entirely to walkers, cyclists and jaunting cars.</p>
+
+    <p>At the northern end sits Kate Kearney's Cottage — now a pub and the traditional starting point for the Gap. At the southern end, Lord Brandon's Cottage sits at the edge of the Upper Lake, where boats wait to carry visitors back across the lakes to Ross Castle. The combination of the Gap on foot and the lake journey by boat is one of the classic Killarney experiences.</p>
+
+    <div class="pull-quote">
+      <p>Five mountain lakes, sheer rock faces and complete silence — the Gap of Dunloe is one of the few places in Ireland that still feels genuinely wild.</p>
+    </div>
+
+    <figure class="article-img">
+      <img src="../img-park.jpg" alt="Looking through the Gap of Dunloe towards the Black Valley" onerror="this.style.display='none'; this.parentElement.style.minHeight='200px'">
+      <figcaption>Looking south through the Gap towards the Black Valley — the Upper Lake lies beyond.</figcaption>
+    </figure>
+
+    <h2>Ways to experience the Gap</h2>
+
+    <div class="ways-grid">
+      <div class="way-card">
+        <div class="way-icon">🥾</div>
+        <h4>On Foot</h4>
+        <p>The full Gap walk is 11km one way and takes 3–4 hours. The terrain is manageable but uneven in places. Return by boat across the lakes.</p>
+      </div>
+      <div class="way-card">
+        <div class="way-icon">🚴</div>
+        <h4>By Bike</h4>
+        <p>Cycling the Gap is popular — hire bikes in Killarney, cycle out via the N72 and push up through the pass. The descent into the Black Valley is exhilarating.</p>
+      </div>
+      <div class="way-card">
+        <div class="way-icon">🐎</div>
+        <h4>Jaunting Car</h4>
+        <p>The traditional way — a horse-drawn jaunting car with a local jarvey narrating the landscape. Departs from Kate Kearney's Cottage.</p>
+      </div>
+    </div>
+
+    <h2>The classic full day route</h2>
+    <p>The most rewarding way to experience the Gap is as part of a full circular day — and it's one the jarveys have been running for over a century. Take a jaunting car or bike from Killarney town to Kate Kearney's Cottage, travel through the Gap by foot or jaunting car to Lord Brandon's Cottage, then board a traditional boat for the three-lake journey back to Ross Castle. The boat passes through the Upper Lake, Meeting of the Waters and Muckross Lake before arriving back in Killarney — a full day that covers some of the most beautiful terrain in Ireland.</p>
+
+    <h2>Kate Kearney's Cottage</h2>
+    <p>The traditional starting point for the Gap, Kate Kearney's Cottage is named after a local woman from the 19th century said to have sold illicit poitín to travellers. Today it's a pub and visitor facility, busy on summer days with walkers, cyclists and jaunting car passengers preparing for the journey through the pass. It's 10km west of Killarney town on the R562.</p>
+
+    <hr class="section-rule">
+
+    <h2>Practical information</h2>
+
+    <div class="practical-grid">
+      <div class="practical-item">
+        <p class="label">Getting There</p>
+        <p>Kate Kearney's Cottage is 10km from Killarney on the R562. Drive, cycle or take a taxi from town</p>
+      </div>
+      <div class="practical-item">
+        <p class="label">Entry</p>
+        <p>Free to walk or cycle through. Jaunting cars are priced per person — agree the fare before departing</p>
+      </div>
+      <div class="practical-item">
+        <p class="label">Season</p>
+        <p>Open year round. Summer is busiest. Autumn is spectacular with colour. Winter is quiet and dramatic</p>
+      </div>
+      <div class="practical-item">
+        <p class="label">Boat Return</p>
+        <p>Boats from Lord Brandon's Cottage back to Ross Castle run seasonally — confirm availability before setting out</p>
+      </div>
+      <div class="practical-item">
+        <p class="label">Time Needed</p>
+        <p>Half day minimum for the Gap alone. Full day for the Gap plus lake return by boat</p>
+      </div>
+      <div class="practical-item">
+        <p class="label">What to Bring</p>
+        <p>Waterproof jacket, sturdy footwear, water and food — there are no shops beyond Kate Kearney's</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RELATED -->
+  <section class="section-sm section-alt">
+    <div class="container">
+      <div class="related-grid">
+        <a href="national-park.html" class="pillar-card">
+          <div class="pillar-card-img" style="background:linear-gradient(135deg,#1a4a24,#2d7a38);">🌿</div>
+          <div class="pillar-card-body">
+            <p class="pillar-card-eyebrow">Discover</p>
+            <h3>Killarney National Park</h3>
+            <p>The Gap sits on the western edge of Ireland's oldest national park.</p>
+            <span class="pillar-card-arrow">Read more →</span>
+          </div>
+        </a>
+        <a href="torc-waterfall.html" class="pillar-card">
+          <div class="pillar-card-img" style="background:linear-gradient(135deg,#1a3a4a,#2a5a6a);">💦</div>
+          <div class="pillar-card-body">
+            <p class="pillar-card-eyebrow">Discover</p>
+            <h3>Torc Waterfall</h3>
+            <p>A short walk from the road — one of the most rewarding in the park.</p>
+            <span class="pillar-card-arrow">Read more →</span>
+          </div>
+        </a>
+        <a href="black-valley.html" class="pillar-card">
+          <div class="pillar-card-img" style="background:linear-gradient(135deg,#1a1a2a,#2a2a4a);">🌑</div>
+          <div class="pillar-card-body">
+            <p class="pillar-card-eyebrow">Discover</p>
+            <h3>Black Valley</h3>
+            <p>The remote valley at the southern end of the Gap — wild and largely untouched.</p>
+            <span class="pillar-card-arrow">Read more →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo" style="margin-bottom:8px;">
+            <span class="nav-logo-text">killarney<span>.ai</span></span>
+          </a>
+          <p>Your independent guide to Killarney, County Kerry.</p>
+        </div>
+        <div class="footer-col"><h4>Explore</h4><ul><li><a href="../discover.html">Discover</a></li><li><a href="../heritage.html">Heritage</a></li><li><a href="../eat-drink.html">Eat &amp; Drink</a></li><li><a href="../activities.html">Activities</a></li><li><a href="../events.html">Events</a></li></ul></div>
+        <div class="footer-col"><h4>Site</h4><ul><li><a href="../blog.html">Blog</a></li><li><a href="../about.html">About</a></li><li><a href="../advertise.html">Advertise</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Discover</h4><ul><li><a href="national-park.html">National Park</a></li><li><a href="gap-of-dunloe.html">Gap of Dunloe</a></li><li><a href="torc-waterfall.html">Torc Waterfall</a></li><li><a href="ladies-view.html">Ladies View</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 killarney.ai — Killarney, County Kerry, Ireland</p>
+        <p><a href="mailto:killarneyai@gmail.com">killarneyai@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const html=document.documentElement,btn=document.getElementById('themeToggle'),icon=document.getElementById('themeIcon'),saved=localStorage.getItem('theme')||'light';
+    html.setAttribute('data-theme',saved);icon.textContent=saved==='dark'?'☀️':'🌙';
+    btn.addEventListener('click',()=>{const n=html.getAttribute('data-theme')==='dark'?'light':'dark';html.setAttribute('data-theme',n);localStorage.setItem('theme',n);icon.textContent=n==='dark'?'☀️':'🌙';});
+    const ham=document.getElementById('hamburger'),menu=document.getElementById('mobileMenu');
+    ham.addEventListener('click',()=>{const o=menu.classList.toggle('open');ham.classList.toggle('open',o);ham.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':'';});
+    menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');ham.classList.remove('open');ham.setAttribute('aria-expanded',false);document.body.style.overflow='';}));
+  </script>
+
+</body>
+</html>
