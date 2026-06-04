@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Killarney National Park — Ireland's Oldest National Park</title>
+  <meta name="description" content="Killarney National Park covers 26,000 acres of ancient oak woodland, glacial lakes and mountain terrain. Ireland's first UNESCO Biosphere Reserve and home to the country's only wild native red deer herd.">
+  <meta name="keywords" content="Killarney National Park, things to do Killarney, National Park Ireland, Killarney lakes, red deer Killarney">
+  <meta property="og:title" content="Killarney National Park — killarney.ai">
+  <meta property="og:description" content="26,000 acres of ancient woodland, three glacial lakes and Ireland's highest mountains — all within walking distance of Killarney town.">
+  <meta property="og:url" content="https://www.killarney.ai/discover/national-park.html">
+  <meta property="og:type" content="article">
+  <link rel="canonical" href="https://www.killarney.ai/discover/national-park.html">
+  <link rel="stylesheet" href="../shared.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristAttraction",
+    "name": "Killarney National Park",
+    "description": "Ireland's oldest national park covering 26,000 acres of ancient oak woodland, three glacial lakes and the MacGillycuddy's Reeks mountain range.",
+    "url": "https://www.killarney.ai/discover/national-park.html",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Killarney",
+      "addressRegion": "County Kerry",
+      "addressCountry": "IE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 52.01,
+      "longitude": -9.55
+    }
+  }
+  </script>
+
+  <style>
+    .hero { background: linear-gradient(160deg, #0d2412 0%, #1a4a24 50%, #2d5a34 100%); }
+
+    /* ── ARTICLE LAYOUT ── */
+    .article-body {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    .article-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(22px, 2.5vw, 30px);
+      font-weight: 700;
+      color: var(--ink);
+      margin: 48px 0 14px;
+      line-height: 1.25;
+    }
+
+    .article-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 32px 0 10px;
+    }
+
+    .article-body p {
+      font-size: 16px;
+      color: var(--ink-muted);
+      line-height: 1.8;
+      margin-bottom: 18px;
+    }
+
+    .article-body p:first-of-type {
+      font-size: 17px;
+      color: var(--ink);
+      line-height: 1.75;
+    }
+
+    /* Fact box */
+    .fact-box {
+      background: var(--accent-light);
+      border: 1px solid var(--rule);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      padding: 20px 24px;
+      margin: 32px 0;
+    }
+
+    .fact-box h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    .fact-box ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .fact-box ul li {
+      font-size: 14px;
+      color: var(--ink-muted);
+      display: flex;
+      gap: 10px;
+    }
+
+    .fact-box ul li strong {
+      color: var(--ink);
+      min-width: 120px;
+      flex-shrink: 0;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      border-left: 3px solid var(--accent-gold);
+      padding: 4px 0 4px 24px;
+      margin: 36px 0;
+    }
+
+    .pull-quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-style: italic;
+      color: var(--ink);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* Image placeholder */
+    .article-img {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 32px 0;
+      background: var(--bg-alt);
+      border: 1px solid var(--rule);
+    }
+
+    .article-img img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .article-img figcaption {
+      font-size: 13px;
+      color: var(--ink-muted);
+      padding: 10px 16px;
+      font-style: italic;
+    }
+
+    /* Section divider */
+    .section-rule {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 48px 0;
+    }
+
+    /* Practical info grid */
+    .practical-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .practical-item {
+      background: var(--card-bg);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      padding: 16px 20px;
+    }
+
+    .practical-item .label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .practical-item p {
+      font-size: 14px;
+      color: var(--ink);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Related pages */
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 640px) {
+      .practical-grid { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .article-img img { height: 240px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <span class="nav-logo-text">killarney<span>.ai</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../discover.html" class="active">Discover</a></li>
+        <li><a href="../heritage.html">Heritage</a></li>
+        <li><a href="../eat-drink.html">Eat &amp; Drink</a></li>
+        <li><a href="../activities.html">Activities</a></li>
+        <li><a href="../events.html">Events</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle"><span id="themeIcon">🌙</span></button>
+        <button class="hamburger" id="hamburger" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../discover.html" class="active">Discover</a>
+    <a href="../heritage.html">Heritage</a>
+    <a href="../eat-drink.html">Eat &amp; Drink</a>
+    <a href="../activities.html">Activities</a>
+    <a href="../events.html">Events</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../about.html">About</a>
+    <a href="../advertise.html">Advertise</a>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <img class="hero-img" src="../img-park.jpg" alt="Killarney National Park" onerror="this.style.display='none'">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Discover · Nature &amp; Landscape</p>
+      <h1>Killarney National Park</h1>
+      <p class="hero-sub">Ireland's oldest national park — 26,000 acres of ancient woodland, glacial lakes and mountain wilderness.</p>
+    </div>
+  </section>
+
+  <!-- ── BREADCRUMB ── -->
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="../discover.html">Discover</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Killarney National Park</span>
+    </div>
+  </div>
+
+  <!-- ── ARTICLE ── -->
+  <div class="article-body">
+
+    <p>Killarney National Park is one of the great wild places of Ireland — and the fact that it begins at the edge of a busy tourist town makes it all the more extraordinary. Within ten minutes of walking from the town centre you can be deep in ancient oak woodland, with red deer grazing on the hillside and white-tailed eagles riding thermals above the lake.</p>
+
+    <div class="fact-box">
+      <h4>Killarney National Park — at a glance</h4>
+      <ul>
+        <li><strong>Size</strong> 26,000 acres (10,500 hectares)</li>
+        <li><strong>Established</strong> 1932 — Ireland's first national park</li>
+        <li><strong>UNESCO status</strong> Biosphere Reserve since 1981</li>
+        <li><strong>Lakes</strong> Lough Leane, Muckross Lake, Upper Lake</li>
+        <li><strong>Highest point</strong> Carrauntoohil, 1,038m</li>
+        <li><strong>Entry</strong> Free — open year round</li>
+      </ul>
+    </div>
+
+    <h2>Ireland's first national park</h2>
+    <p>The park was established in 1932 when the Muckross Estate was gifted to the Irish state — making it the first national park in Ireland. In 1981 it became Ireland's first UNESCO Biosphere Reserve, recognising the exceptional quality of its ecosystems. Today it covers over 26,000 acres and encompasses three lakes, Ireland's only native red deer herd, ancient oak and yew woodland, and the full sweep of the MacGillycuddy's Reeks mountain range.</p>
+
+    <figure class="article-img">
+      <img src="../img-sunset.jpg" alt="Killarney National Park lakes and mountains at sunset" onerror="this.style.display='none'; this.parentElement.style.minHeight='200px'">
+      <figcaption>The Killarney lakes at dusk — Lough Leane in the foreground, the Reeks behind.</figcaption>
+    </figure>
+
+    <h2>The three lakes</h2>
+    <p>Three glacially carved lakes sit at the heart of the park. Lough Leane is the largest — covering over 4,000 acres — and the most visible from the town. Muckross Lake lies to the south, connected to Lough Leane by a narrow channel at Brickeen Bridge. The Upper Lake is the most remote and arguably the most beautiful, surrounded on three sides by mountains and accessible via the Old Kenmare Road or by boat.</p>
+
+    <p>The lakes are connected by rivers and channels that make up one of the richest freshwater ecosystems in Ireland. Brown trout, salmon and arctic char have been in these waters since the last ice age.</p>
+
+    <div class="pull-quote">
+      <p>The park begins at the edge of the town — within ten minutes on foot you can be in ancient woodland with deer on the hillside above you.</p>
+    </div>
+
+    <h2>Ancient woodland</h2>
+    <p>Much of the park is covered in native oak woodland — one of the last surviving examples of ancient Irish forest. Before human settlement, oak woodland covered most of Ireland. Today, Killarney is one of the few places where it survives at scale, and the quality of what remains is exceptional. The woodland floor is thick with mosses, ferns and lichens that thrive in the mild, damp Kerry climate.</p>
+
+    <p>On the shores of Muckross Lake sits Reenadinna Yew Wood — one of only three pure yew woodlands in Europe. The yew trees here are ancient and the atmosphere genuinely otherworldly, particularly in winter when the canopy closes out the sky.</p>
+
+    <h2>Wildlife</h2>
+    <p>The park is home to Ireland's only remaining wild herd of native red deer — around 700 animals that have lived in these mountains continuously since the last ice age. They are most visible in the early morning on the lower hillsides, particularly around Torc and Muckross. In autumn, the rutting season brings stags bellowing across the valley — one of the great wildlife spectacles in Ireland.</p>
+
+    <p>White-tailed eagles were reintroduced to the park in 2007 after an absence of over a century. They have established a breeding population and are now regularly seen over the lakes — with a wingspan of up to 2.5 metres they are unmistakable in the air. Otters, pine martens, red squirrels and kingfishers are all present in the park, though less commonly seen.</p>
+
+    <hr class="section-rule">
+
+    <h2>Practical information</h2>
+
+    <div class="practical-grid">
+      <div class="practical-item">
+        <p class="label">Entry</p>
+        <p>Free — the park is open to the public year round, 24 hours a day</p>
+      </div>
+      <div class="practical-item">
+        <p class="label">Getting There</p>
+        <p>Main entrance at Muckross Road, 3km from Killarney town centre. Walkable or cycleable from town</p>
+      </div>
+      <div class="practical-item">
+        <p class="label">By Foot</p>
+        <p>Multiple waymarked trails from 1km to full day routes. Torc Waterfall trail is the most popular short walk</p>
+      </div>
+      <div class="practical-item">
+        <p class="label">By Bike</p>
+        <p>Bike hire available in Killarney town. The park roads are car-free in most areas — ideal for cycling</p>
+      </div>
+      <div class="practical-item">
+        <p class="label">By Jaunting Car</p>
+        <p>Traditional horse-drawn tours depart from Kenmare Place in town and from Muckross House</p>
+      </div>
+      <div class="practical-item">
+        <p class="label">By Boat</p>
+        <p>Boat trips on the lakes depart from Ross Castle — the best way to reach the Upper Lake and Innisfallen Island</p>
+      </div>
+    </div>
+
+    <hr class="section-rule">
+
+    <h2>Explore further</h2>
+    <p>The National Park contains many of Killarney's most important natural and historical attractions — each worth a dedicated visit.</p>
+
+  </div>
+
+  <!-- ── RELATED PAGES ── -->
+  <section class="section-sm section-alt">
+    <div class="container">
+      <div class="related-grid">
+        <a href="gap-of-dunloe.html" class="pillar-card">
+          <div class="pillar-card-img" style="background:linear-gradient(135deg,#1e2a1f,#3a5a3a);">🏔️</div>
+          <div class="pillar-card-body">
+            <p class="pillar-card-eyebrow">Discover</p>
+            <h3>Gap of Dunloe</h3>
+            <p>A glacial mountain pass of extraordinary drama — just west of the park.</p>
+            <span class="pillar-card-arrow">Read more →</span>
+          </div>
+        </a>
+        <a href="torc-waterfall.html" class="pillar-card">
+          <div class="pillar-card-img" style="background:linear-gradient(135deg,#1a3a4a,#2a5a6a);">💦</div>
+          <div class="pillar-card-body">
+            <p class="pillar-card-eyebrow">Discover</p>
+            <h3>Torc Waterfall</h3>
+            <p>The most popular short walk in the park — 15 minutes through ancient woodland.</p>
+            <span class="pillar-card-arrow">Read more →</span>
+          </div>
+        </a>
+        <a href="../heritage/muckross-abbey.html" class="pillar-card">
+          <div class="pillar-card-img" style="background:linear-gradient(135deg,#1a1a2a,#3a3a5a);">🏛️</div>
+          <div class="pillar-card-body">
+            <p class="pillar-card-eyebrow">Heritage</p>
+            <h3>Muckross Abbey</h3>
+            <p>A 15th century friary in the heart of the park — remarkably well preserved.</p>
+            <span class="pillar-card-arrow">Read more →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo" style="margin-bottom:8px;">
+            <span class="nav-logo-text">killarney<span>.ai</span></span>
+          </a>
+          <p>Your independent guide to Killarney, County Kerry.</p>
+        </div>
+        <div class="footer-col"><h4>Explore</h4><ul><li><a href="../discover.html">Discover</a></li><li><a href="../heritage.html">Heritage</a></li><li><a href="../eat-drink.html">Eat &amp; Drink</a></li><li><a href="../activities.html">Activities</a></li><li><a href="../events.html">Events</a></li></ul></div>
+        <div class="footer-col"><h4>Site</h4><ul><li><a href="../blog.html">Blog</a></li><li><a href="../about.html">About</a></li><li><a href="../advertise.html">Advertise</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Discover</h4><ul><li><a href="national-park.html">National Park</a></li><li><a href="gap-of-dunloe.html">Gap of Dunloe</a></li><li><a href="torc-waterfall.html">Torc Waterfall</a></li><li><a href="ladies-view.html">Ladies View</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 killarney.ai — Killarney, County Kerry, Ireland</p>
+        <p><a href="mailto:killarneyai@gmail.com">killarneyai@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const html=document.documentElement,btn=document.getElementById('themeToggle'),icon=document.getElementById('themeIcon'),saved=localStorage.getItem('theme')||'light';
+    html.setAttribute('data-theme',saved);icon.textContent=saved==='dark'?'☀️':'🌙';
+    btn.addEventListener('click',()=>{const n=html.getAttribute('data-theme')==='dark'?'light':'dark';html.setAttribute('data-theme',n);localStorage.setItem('theme',n);icon.textContent=n==='dark'?'☀️':'🌙';});
+    const ham=document.getElementById('hamburger'),menu=document.getElementById('mobileMenu');
+    ham.addEventListener('click',()=>{const o=menu.classList.toggle('open');ham.classList.toggle('open',o);ham.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':'';});
+    menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');ham.classList.remove('open');ham.setAttribute('aria-expanded',false);document.body.style.overflow='';}));
+  </script>
+
+</body>
+</html>
