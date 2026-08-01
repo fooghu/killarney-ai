@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta name="google-site-verification" content="oj6KlQWUg0PyJqyYcUvvdp89EbX_JVR1djGUVFFxWVU" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Killarney.ai — Your Guide to Killarney, Kerry, Ireland</title>
+  <meta name="description" content="Killarney.ai is your complete guide to Killarney, County Kerry. Discover the National Park, heritage sites, restaurants, activities and annual events.">
+  <meta name="keywords" content="Killarney, Kerry, Ireland, tourism, National Park, Gap of Dunloe, things to do in Killarney">
+  <meta property="og:title" content="Killarney.ai — Your Guide to Killarney">
+  <meta property="og:description" content="Discover Killarney, County Kerry — nature, heritage, food, activities and events.">
+  <meta property="og:url" content="https://www.killarney.ai/">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://www.killarney.ai/">
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    /* ── HOME-SPECIFIC ── */
+
+    /* Hero — full bleed with placeholder gradient */
+    .home-hero {
+      position: relative;
+      height: 580px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      background: linear-gradient(160deg, #1a3a1f 0%, #2d5a34 40%, #1e4a28 70%, #0d2412 100%);
+    }
+
+    .home-hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.7;
+    }
+
+    .home-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top,
+        rgba(0,0,0,0.75) 0%,
+        rgba(0,0,0,0.3) 50%,
+        transparent 100%);
+    }
+
+    .home-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 24px 56px;
+    }
+
+    .home-hero-content .eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-bottom: 12px;
+    }
+
+    .home-hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.1;
+      max-width: 720px;
+      margin-bottom: 16px;
+    }
+
+    .home-hero-content h1 em {
+      font-style: italic;
+      color: #8fd49a;
+    }
+
+    .home-hero-content p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.82);
+      max-width: 480px;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .hero-weather {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.9);
+    }
+
+    /* ── PILLAR SECTION ── */
+    .pillars {
+      padding: 72px 0;
+    }
+
+    .pillars-intro {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .pillars-intro h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 3vw, 38px);
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .pillars-intro p {
+      font-size: 16px;
+      color: var(--ink-muted);
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    /* Featured pillar spans 2 columns */
+    .pillar-card-featured {
+      grid-column: span 2;
+    }
+
+    .pillar-card-featured .pillar-card-img {
+      height: 260px;
+    }
+
+    /* Pillar colour accents */
+    .pillar-discover .pillar-card-img  { background: linear-gradient(135deg, #1a4a24 0%, #2d7a38 100%); }
+    .pillar-heritage .pillar-card-img  { background: linear-gradient(135deg, #3a2a10 0%, #7a5a20 100%); }
+    .pillar-eat      .pillar-card-img  { background: linear-gradient(135deg, #4a1a1a 0%, #8a3a2a 100%); }
+    .pillar-do       .pillar-card-img  { background: linear-gradient(135deg, #1a3a4a 0%, #2a6a8a 100%); }
+    .pillar-events   .pillar-card-img  { background: linear-gradient(135deg, #2a1a4a 0%, #5a3a8a 100%); }
+    .pillar-blog     .pillar-card-img  { background: linear-gradient(135deg, #1a3a2a 0%, #3a6a4a 100%); }
+
+    /* ── QUICK FACTS STRIP ── */
+    .facts-strip {
+      background: var(--accent);
+      padding: 20px 0;
+      overflow: hidden;
+    }
+
+    .facts-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      gap: 40px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .fact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .fact-icon { font-size: 20px; }
+
+    .fact-text strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .fact-text span {
+      font-size: 12px;
+      opacity: 0.8;
+    }
+
+    /* ── HIGHLIGHTS ── */
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .highlight-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 14px;
+      line-height: 1.25;
+    }
+
+    .highlight-text p {
+      font-size: 15px;
+      color: var(--ink-muted);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity .2s, transform .2s;
+    }
+    .btn:hover { opacity: 0.88; transform: translateY(-1px); text-decoration: none; }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--accent);
+      border: 1.5px solid var(--accent);
+    }
+    .btn-outline:hover { background: var(--accent-light); }
+
+    .highlight-visual {
+      background: var(--bg-alt);
+      border: 1px solid var(--rule);
+      border-radius: 16px;
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-size: 64px;
+    }
+
+    .highlight-visual img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+
+    /* ── EVENTS PREVIEW ── */
+    .event-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .event-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      padding: 16px 20px;
+      text-decoration: none;
+      color: var(--ink);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .event-item:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--card-shadow);
+      text-decoration: none;
+    }
+
+    .event-date {
+      text-align: center;
+      min-width: 48px;
+      flex-shrink: 0;
+    }
+
+    .event-date .month {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .event-date .day {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1;
+    }
+
+    .event-divider {
+      width: 1px;
+      height: 40px;
+      background: var(--rule);
+      flex-shrink: 0;
+    }
+
+    .event-info h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    .event-info p {
+      font-size: 13px;
+      color: var(--ink-muted);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      .pillar-grid { grid-template-columns: repeat(2, 1fr); }
+      .pillar-card-featured { grid-column: span 2; }
+      .highlight-grid { grid-template-columns: 1fr; }
+      .highlight-visual { height: 240px; }
+    }
+
+    @media (max-width: 640px) {
+      .home-hero { height: 480px; }
+      .pillar-grid { grid-template-columns: 1fr; }
+      .pillar-card-featured { grid-column: span 1; }
+      .pillar-card-featured .pillar-card-img { height: 180px; }
+      .facts-inner { gap: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="Killarney.ai home">
+        
+        <span class="nav-logo-text">killarney<span>.ai</span></span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="heritage.html">Heritage</a></li>
+        <li><a href="eat-drink.html">Eat &amp; Drink</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <span id="themeIcon">🌙</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+    <a href="discover.html">Discover</a>
+    <a href="heritage.html">Heritage</a>
+    <a href="eat-drink.html">Eat &amp; Drink</a>
+    <a href="activities.html">Activities</a>
+    <a href="events.html">Events</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About</a>
+    <a href="advertise.html">Advertise</a>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section class="home-hero" aria-label="Hero">
+    <!-- Replace src with your actual hero image e.g. img-park.jpg -->
+    <img class="home-hero-img" src="img-park.jpg" alt="Killarney National Park, County Kerry, Ireland" onerror="this.style.display='none'">
+    <div class="home-hero-overlay"></div>
+    <div class="home-hero-content">
+      <p class="eyebrow">County Kerry, Ireland</p>
+      <h1>Where <em>wild nature</em> meets ancient history</h1>
+      <p>Your complete guide to Killarney — the National Park, heritage sites, food, activities and everything in between.</p>
+      <div class="hero-weather" id="weatherWidget">
+        <span>🌤</span>
+        <span id="weatherText">Loading weather…</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── QUICK FACTS STRIP ── -->
+  <div class="facts-strip" role="complementary" aria-label="Killarney at a glance">
+    <div class="facts-inner">
+      <div class="fact-item">
+        <span class="fact-icon">🌿</span>
+        <div class="fact-text">
+          <strong>26,000 acres</strong>
+          <span>National Park</span>
+        </div>
+      </div>
+      <div class="fact-item">
+        <span class="fact-icon">💧</span>
+        <div class="fact-text">
+          <strong>3 Glacial Lakes</strong>
+          <span>Lough Leane &amp; beyond</span>
+        </div>
+      </div>
+      <div class="fact-item">
+        <span class="fact-icon">⛰️</span>
+        <div class="fact-text">
+          <strong>1,038m</strong>
+          <span>Carrauntoohil — Ireland's highest</span>
+        </div>
+      </div>
+      <div class="fact-item">
+        <span class="fact-icon">🦌</span>
+        <div class="fact-text">
+          <strong>Wild Red Deer</strong>
+          <span>Ireland's only native herd</span>
+        </div>
+      </div>
+      <div class="fact-item">
+        <span class="fact-icon">🏰</span>
+        <div class="fact-text">
+          <strong>4,500 Years</strong>
+          <span>of human history</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PILLAR NAVIGATION ── -->
+  <section class="pillars">
+    <div class="container">
+      <div class="pillars-intro">
+        <h2>Everything Killarney</h2>
+        <p>From glacial valleys to ancient monasteries, Michelin-recommended restaurants to mountain trails — explore it all.</p>
+      </div>
+
+      <div class="pillar-grid">
+
+        <!-- Discover — featured -->
+        <a href="discover.html" class="pillar-card pillar-discover pillar-card-featured" aria-label="Discover Killarney's nature and landscapes">
+          <div class="pillar-card-img">
+            <img src="img-park.jpg" alt="Killarney National Park" onerror="this.style.display='none'; this.parentElement.innerHTML='🏔️'">
+          </div>
+          <div class="pillar-card-body">
+            <p class="pillar-card-eyebrow">Nature &amp; Landscape</p>
+            <h3>Discover</h3>
+            <p>The National Park, three glacial lakes, the Gap of Dunloe, Torc Waterfall and Ireland's highest mountains — all within reach.</p>
+            <span class="pillar-card-arrow">Explore nature →</span>
+          </div>
+        </a>
+
+        <!-- Heritage -->
+        <a href="heritage.html" class="pillar-card pillar-heritage" aria-label="Discover Killarney's Celtic and ancient heritage">
+          <div class="pillar-card-img">🏛️</div>
+          <div class="pillar-card-body">
+            <p class="pillar-card-eyebrow">Celtic &amp; Ancient History</p>
+            <h3>Heritage</h3>
+            <p>A 7th century island monastery, 4,500-year-old copper mines, and ancient standing stones.</p>
+            <span class="pillar-card-arrow">Explore heritage →</span>
+          </div>
+        </a>
+
+        <!-- Eat & Drink -->
+        <a href="eat-drink.html" class="pillar-card pillar-eat" aria-label="Discover Killarney's restaurants, bars and coffee shops">
+          <div class="pillar-card-img">🍽️</div>
+          <div class="pillar-card-body">
+            <p class="pillar-card-eyebrow">Restaurants, Bars &amp; Coffee</p>
+            <h3>Eat &amp; Drink</h3>
+            <p>From traditional pub sessions to contemporary Kerry cuisine — the best of Killarney's food and drink scene.</p>
+            <span class="pillar-card-arrow">Explore food →</span>
+          </div>
+        </a>
+
+        <!-- Do -->
+        <a href="activities.html" class="pillar-card pillar-do" aria-label="Things to do in Killarney">
+          <div class="pillar-card-img">
+            <img src="img-forest.jpg" alt="Activities in Killarney" onerror="this.style.display='none'; this.parentElement.innerHTML='🚵'">
+          </div>
+          <div class="pillar-card-body">
+            <p class="pillar-card-eyebrow">Activities &amp; Experiences</p>
+            <h3>Activities</h3>
+            <p>Hiking, cycling, golf, fishing, wellness and jaunting cars — there's something for everyone.</p>
+            <span class="pillar-card-arrow">Explore activities →</span>
+          </div>
+        </a>
+
+        <!-- Events -->
+        <a href="events.html" class="pillar-card pillar-events" aria-label="Annual events in Killarney">
+          <div class="pillar-card-img">🎪</div>
+          <div class="pillar-card-body">
+            <p class="pillar-card-eyebrow">Annual Festivals</p>
+            <h3>Events</h3>
+            <p>The Races, Wander Wild, Puck Fair, Pan Celtic — Killarney's calendar of unmissable annual events.</p>
+            <span class="pillar-card-arrow">Explore events →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HIGHLIGHT — NATIONAL PARK ── -->
+  <section class="section section-alt" aria-label="Killarney National Park highlight">
+    <div class="container">
+      <div class="highlight-grid">
+        <div class="highlight-text">
+          <p class="text-accent" style="font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">Did you know?</p>
+          <h2>Ireland's oldest and largest National Park</h2>
+          <p>Killarney National Park covers over 26,000 acres of ancient oak woodland, glacial lakes and mountain terrain. It was the first area in Ireland to be designated a UNESCO Biosphere Reserve and is home to the country's only remaining wild herd of native red deer.</p>
+          <a href="discover/national-park.html" class="btn">Discover the Park →</a>
+        </div>
+        <div class="highlight-visual">
+          <img src="img-sunset.jpg" alt="Killarney National Park at sunset" onerror="this.style.display='none'; this.parentElement.innerHTML='🌅'">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EVENTS PREVIEW ── -->
+  <section class="section" aria-label="Upcoming annual events">
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:32px;flex-wrap:wrap;gap:12px;">
+        <div>
+          <h2 style="font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,32px);font-weight:700;">Annual Events</h2>
+          <p class="text-muted" style="margin-top:6px;font-size:15px;">Events that happen every year — plan your visit around them.</p>
+        </div>
+        <a href="events.html" class="btn btn-outline">All events →</a>
+      </div>
+
+      <div class="event-list">
+        <a href="events/killarney-races.html" class="event-item">
+          <div class="event-date"><div class="month">Jul</div><div class="day">17</div></div>
+          <div class="event-divider"></div>
+          <div class="event-info">
+            <h4>Killarney Races — Summer Festival</h4>
+            <p>Three days of horse racing, fashion and atmosphere at one of Ireland's most celebrated race meetings.</p>
+          </div>
+        </a>
+        <a href="events/puck-fair.html" class="event-item">
+          <div class="event-date"><div class="month">Aug</div><div class="day">10</div></div>
+          <div class="event-divider"></div>
+          <div class="event-info">
+            <h4>Puck Fair, Killorglin</h4>
+            <p>One of Ireland's oldest fairs — three days of music, street entertainment and ancient Celtic tradition.</p>
+          </div>
+        </a>
+        <a href="events/wander-wild.html" class="event-item">
+          <div class="event-date"><div class="month">Sep</div><div class="day">TBC</div></div>
+          <div class="event-divider"></div>
+          <div class="event-info">
+            <h4>Wander Wild Festival</h4>
+            <p>Kerry's outdoor adventure and wellness festival — hiking, kayaking, yoga and wild swimming.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo" style="margin-bottom:8px;">
+            
+            <span class="nav-logo-text">killarney<span>.ai</span></span>
+          </a>
+          <p>Your independent guide to Killarney, County Kerry — written by locals, for visitors and everyone in between.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="heritage.html">Heritage</a></li>
+            <li><a href="eat-drink.html">Eat &amp; Drink</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="events.html">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Site</h4>
+          <ul>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="advertise.html">Advertise</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Killarney</h4>
+          <ul>
+            <li><a href="discover/national-park.html">National Park</a></li>
+            <li><a href="discover/gap-of-dunloe.html">Gap of Dunloe</a></li>
+            <li><a href="heritage/muckross-abbey.html">Muckross Abbey</a></li>
+            <li><a href="events/killarney-races.html">Killarney Races</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 killarney.ai — Killarney, County Kerry, Ireland</p>
+        <p><a href="mailto:killarneyai@gmail.com">killarneyai@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── THEME TOGGLE ──
+    const html = document.documentElement;
+    const btn  = document.getElementById('themeToggle');
+    const icon = document.getElementById('themeIcon');
+
+    const saved = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', saved);
+    icon.textContent = saved === 'dark' ? '☀️' : '🌙';
+
+    btn.addEventListener('click', () => {
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      icon.textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+
+    // ── HAMBURGER ──
+    const ham  = document.getElementById('hamburger');
+    const menu = document.getElementById('mobileMenu');
+
+    ham.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      ham.classList.toggle('open', open);
+      ham.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+
+    // Close mobile menu on link click
+    menu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        menu.classList.remove('open');
+        ham.classList.remove('open');
+        ham.setAttribute('aria-expanded', false);
+        document.body.style.overflow = '';
+      });
+    });
+
+    // ── WEATHER ──
+    async function loadWeather() {
+      try {
+        const r = await fetch(
+          'https://api.open-meteo.com/v1/forecast?latitude=52.06&longitude=-9.50&current_weather=true'
+        );
+        const d = await r.json();
+        const w = d.current_weather;
+        const codes = {0:'Clear',1:'Mainly clear',2:'Partly cloudy',3:'Overcast',45:'Foggy',48:'Foggy',51:'Light drizzle',53:'Drizzle',55:'Heavy drizzle',61:'Light rain',63:'Rain',65:'Heavy rain',71:'Light snow',73:'Snow',75:'Heavy snow',80:'Showers',81:'Showers',82:'Heavy showers',95:'Thunderstorm'};
+        const icons = {0:'☀️',1:'🌤',2:'⛅',3:'☁️',45:'🌫',48:'🌫',51:'🌦',53:'🌦',55:'🌧',61:'🌦',63:'🌧',65:'🌧',71:'🌨',73:'❄️',75:'❄️',80:'🌦',81:'🌧',82:'⛈',95:'⛈'};
+        const desc = codes[w.weathercode] || 'Killarney';
+        const ic   = icons[w.weathercode] || '🌤';
+        document.getElementById('weatherWidget').innerHTML =
+          `<span>${ic}</span><span>${Math.round(w.temperature)}°C · ${desc} in Killarney right now</span>`;
+      } catch(e) {
+        document.getElementById('weatherWidget').innerHTML =
+          `<span>🌤</span><span>Killarney, County Kerry</span>`;
+      }
+    }
+    loadWeather();
+  </script>
+
+</body>
+</html>
