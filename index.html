@@ -170,7 +170,8 @@
       color: rgba(255,255,255,0.9);
     }
 
-    .fact-icon { font-size: 20px; }
+    .fact-icon { width: 30px; height: 30px; flex-shrink: 0; color: #f3dfa6; }
+    .fact-icon svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 
     .fact-text strong {
       display: block;
@@ -392,35 +393,35 @@
   <div class="facts-strip" role="complementary" aria-label="Killarney at a glance">
     <div class="facts-inner">
       <div class="fact-item">
-        <span class="fact-icon">🌿</span>
+        <span class="fact-icon" aria-hidden="true"><svg><use href="/icons.svg#tree"/></svg></span>
         <div class="fact-text">
           <strong>26,000 acres</strong>
           <span>National Park</span>
         </div>
       </div>
       <div class="fact-item">
-        <span class="fact-icon">💧</span>
+        <span class="fact-icon" aria-hidden="true"><svg><use href="/icons.svg#lake"/></svg></span>
         <div class="fact-text">
           <strong>3 Glacial Lakes</strong>
           <span>Lough Leane &amp; beyond</span>
         </div>
       </div>
       <div class="fact-item">
-        <span class="fact-icon">⛰️</span>
+        <span class="fact-icon" aria-hidden="true"><svg><use href="/icons.svg#peak"/></svg></span>
         <div class="fact-text">
           <strong>1,038m</strong>
           <span>Carrauntoohil — Ireland's highest</span>
         </div>
       </div>
       <div class="fact-item">
-        <span class="fact-icon">🦌</span>
+        <span class="fact-icon" aria-hidden="true"><svg><use href="/icons.svg#stag"/></svg></span>
         <div class="fact-text">
           <strong>Wild Red Deer</strong>
           <span>Ireland's only native herd</span>
         </div>
       </div>
       <div class="fact-item">
-        <span class="fact-icon">🏰</span>
+        <span class="fact-icon" aria-hidden="true"><svg><use href="/icons.svg#ogham"/></svg></span>
         <div class="fact-text">
           <strong>4,500 Years</strong>
           <span>of human history</span>
@@ -442,7 +443,7 @@
         <!-- Discover — featured -->
         <a href="discover.html" class="pillar-card pillar-discover pillar-card-featured" aria-label="Discover Killarney's nature and landscapes">
           <div class="pillar-card-img">
-            <img src="img-park.jpg" alt="Killarney National Park" onerror="this.style.display='none'; this.parentElement.innerHTML='🏔️'">
+            <img src="img-park.jpg" alt="Killarney National Park" onerror="this.parentElement.classList.add('tile');this.outerHTML='<svg class=&quot;tile-icon&quot; aria-hidden=&quot;true&quot;><use href=&quot;/icons.svg#tree&quot;/></svg>'">
           </div>
           <div class="pillar-card-body">
             <p class="pillar-card-eyebrow">Nature &amp; Landscape</p>
@@ -454,7 +455,7 @@
 
         <!-- Heritage -->
         <a href="heritage.html" class="pillar-card pillar-heritage" aria-label="Discover Killarney's Celtic and ancient heritage">
-          <div class="pillar-card-img">🏛️</div>
+          <div class="pillar-card-img tile"><svg class="tile-icon" aria-hidden="true"><use href="/icons.svg#round-tower"/></svg></div>
           <div class="pillar-card-body">
             <p class="pillar-card-eyebrow">Celtic &amp; Ancient History</p>
             <h3>Heritage</h3>
@@ -465,7 +466,7 @@
 
         <!-- Eat & Drink -->
         <a href="eat-drink.html" class="pillar-card pillar-eat" aria-label="Discover Killarney's restaurants, bars and coffee shops">
-          <div class="pillar-card-img">🍽️</div>
+          <div class="pillar-card-img tile"><svg class="tile-icon" aria-hidden="true"><use href="/icons.svg#plate"/></svg></div>
           <div class="pillar-card-body">
             <p class="pillar-card-eyebrow">Restaurants, Bars &amp; Coffee</p>
             <h3>Eat &amp; Drink</h3>
@@ -477,7 +478,7 @@
         <!-- Do -->
         <a href="activities.html" class="pillar-card pillar-do" aria-label="Things to do in Killarney">
           <div class="pillar-card-img">
-            <img src="img-forest.jpg" alt="Activities in Killarney" onerror="this.style.display='none'; this.parentElement.innerHTML='🚵'">
+            <img src="img-forest.jpg" alt="Activities in Killarney" onerror="this.parentElement.classList.add('tile');this.outerHTML='<svg class=&quot;tile-icon&quot; aria-hidden=&quot;true&quot;><use href=&quot;/icons.svg#boot&quot;/></svg>'">
           </div>
           <div class="pillar-card-body">
             <p class="pillar-card-eyebrow">Activities &amp; Experiences</p>
@@ -489,7 +490,7 @@
 
         <!-- Events -->
         <a href="events.html" class="pillar-card pillar-events" aria-label="Annual events in Killarney">
-          <div class="pillar-card-img">🎪</div>
+          <div class="pillar-card-img tile"><svg class="tile-icon" aria-hidden="true"><use href="/icons.svg#bunting"/></svg></div>
           <div class="pillar-card-body">
             <p class="pillar-card-eyebrow">Annual Festivals</p>
             <h3>Events</h3>
@@ -513,7 +514,7 @@
           <a href="discover/national-park.html" class="btn">Discover the Park →</a>
         </div>
         <div class="highlight-visual">
-          <img src="img-sunset.jpg" alt="Killarney National Park at sunset" onerror="this.style.display='none'; this.parentElement.innerHTML='🌅'">
+          <img src="img-sunset.jpg" alt="Killarney National Park at sunset" onerror="this.parentElement.classList.add('tile');this.outerHTML='<svg class=&quot;tile-icon&quot; aria-hidden=&quot;true&quot;><use href=&quot;/icons.svg#tree&quot;/></svg>'">
         </div>
       </div>
     </div>
