@@ -559,3 +559,12 @@ img { max-width: 100%; display: block; }
     linear-gradient(to top, rgba(0,0,0,0.65) 0%, var(--hero-overlay) 50%, transparent 100%);
 }
 .hero-eyebrow, .hero h1, .hero-sub { text-shadow: 0 1px 14px rgba(0,0,0,0.5); }
+
+/* ── AI DISCLOSURE LABEL (see About page: AI-made content is labelled) ── */
+.pillar-card-img { position: relative; }
+.ai-credit {
+  position: absolute; right: 12px; bottom: 10px; z-index: 3;
+  font-size: 11px; font-weight: 500; letter-spacing: .3px; line-height: 1;
+  color: rgba(255,255,255,0.85); background: rgba(0,0,0,0.4);
+  padding: 4px 9px; border-radius: 99px; pointer-events: none;
+}
