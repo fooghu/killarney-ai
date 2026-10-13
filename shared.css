@@ -551,3 +551,11 @@ img { max-width: 100%; display: block; }
 }
 .pillar-card:hover .tile-icon { transform: scale(1.06); }
 .pillar-card-featured .tile-icon { width: 84px; height: 84px; }
+
+/* ── HERO TEXT READABILITY over busy photos ── */
+.hero-img + .hero-overlay {
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.2) 45%, transparent 70%),
+    linear-gradient(to top, rgba(0,0,0,0.65) 0%, var(--hero-overlay) 50%, transparent 100%);
+}
+.hero-eyebrow, .hero h1, .hero-sub { text-shadow: 0 1px 14px rgba(0,0,0,0.5); }
